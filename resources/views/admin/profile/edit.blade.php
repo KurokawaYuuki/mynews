@@ -8,6 +8,6 @@
         <title>MyEdit</title>
     </head>
     <body>
-        <h1>Myエディット画面</h1>
+        <h1>My編集画面</h1>
     </body>
 </html>
