@@ -21,15 +21,15 @@
                     <div class="form-group row">
                         <label class="col-md-2">名前</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="user-name" value="{{ old('user-name') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
                     
                     <div class="form-group row">
                         <lalel class="col-md-2">性別</lalel>
                         <div class="col-md-10">
-                            <input type="radio" name="gender" value="male">男 {{ old('user-name') }}
-                            <input type="radio" name="gender" value="female">女 {{ old('user-name') }}
+                            <input type="radio" name="gender" value="男" {{ (old('gender') =='男') ? "checked" : "" }}>男
+                            <input type="radio" name="gender" value="女" {{ (old('gender') =='女') ? "checked" : "" }}>女
                         </div>
                     </div>
                     
@@ -43,7 +43,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">自己紹介</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="introduction" rows="15">{{ old('hobby') }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="15">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
                     {{ csrf_field() }}
