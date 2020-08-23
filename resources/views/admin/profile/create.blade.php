@@ -28,8 +28,8 @@
                     <div class="form-group row">
                         <lalel class="col-md-2">性別</lalel>
                         <div class="col-md-10">
-                            <input type="radio" name="gender" value="{{ old('gender') }}">男 
-                            <input type="radio" name="gender" value="{{ old('gender') }}">女 
+                            <input type="radio" name="gender" value="男" {{ (old('gender') =='男') ? "checked" : "" }}>男
+                            <input type="radio" name="gender" value="女" {{ (old('gender') =='女') ? "checked" : "" }}>女
                         </div>
                     </div>
                     
