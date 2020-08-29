@@ -13,8 +13,7 @@ class NewsController extends Controller
   {
       return view('admin.news.create');
   }
-
-  // 以下を追記
+  
   public function create(Request $request)
   {
     // Varidationを行う
@@ -48,7 +47,7 @@ class NewsController extends Controller
   {
       $cond_title = $request->cond_title;
       if ($cond_title != "") {
-          $posts = News::where('titile', $cond_title)->get();
+          $posts = News::where('title', $cond_title)->get();
       }else{
           $posts = News::all();
       }
@@ -59,9 +58,9 @@ class NewsController extends Controller
   {
     $news = News::find($request->id);
     if (empty($news)) {
-      abort(404);
+        abort(404);
     }
-    return view('admin.news.edit',['news_form' => $news]);
+    return view('admin.news.edit', ['news_form' => $news]);
   }
   
   public function update(Request $request)
@@ -69,7 +68,7 @@ class NewsController extends Controller
     // Validationをかける
     $this->validate($request,News::$rules);
     // News Modelからデータを取得する
-    $news = News::find($request, News::rules);
+    $news = News::find($request, News::$rules);
     // 送信されてきたフォームデータを格納する
     $news_form = $request->all();
     if (isset($news_form['image'])){
