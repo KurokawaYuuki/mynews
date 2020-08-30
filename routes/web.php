@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 /*http://XXXXXX.jp/XXX というアクセスが来たときに、 AAAControllerのbbbというAction に渡すRoutingの設定」を書いてみてください。*/
 Route::get('XXX','AAAController@bbb');
 
@@ -32,6 +33,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('news/delete', 'Admin\NewsController@delete');
     Route::get('profile/delete', 'Admin\ProfileController@delete');
 });
+
 
 Auth::routes();
 
