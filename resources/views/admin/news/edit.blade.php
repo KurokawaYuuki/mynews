@@ -1,13 +1,13 @@
 @extends('layouts.admin')
-@section('title','ニュースの編集')
+@section('title', 'ニュースの編集')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
 
-                <h2>ニュース編集</h2>
-                <form action="{{ action('Admin\NewsController@update') }}" method="post" enctype="multipart/form-data">
+                <h2>ニュースの編集</h2>
+                <form action="{{ action('Admin\NewsController@update') }}" method="post" enctype="multipart/form-date">
                 
                     @if (count($errors) > 0)
                         <ul>
@@ -49,6 +49,7 @@
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>
+
                     </div>
                 </form>
                 <div class="row mt-5">
@@ -66,3 +67,5 @@
             </div>
         </div>
     </div>
+@endsection
+
