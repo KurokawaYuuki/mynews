@@ -1,4 +1,3 @@
-
 @extends('layouts.profile')
 
 @section('title' , '新規Create作成')
