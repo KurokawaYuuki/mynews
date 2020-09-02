@@ -36,8 +36,6 @@ class NewsController extends Controller
       // フォームから送信されてきたimageを削除する
       unset($form['image']);
       
-      $News->timestamps = false;
-      
       // データベースに保存する
       $news->fill($form);
       $news->save();
